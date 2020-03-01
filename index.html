@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: gray;
+      }
+
+      div.mycalculator {
+        text-align: center;
+        width: 250px;
+        margin: 0 auto;
+      }
+
+      input[type="button"],
+      button {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+      }
+      input[type="text"] {
+        height: 50px;
+        width: 100%;
+        background-color: white;
+
+        margin-top: 100px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mycalculator">
+      <form name="calculator" id="calculator">
+        <input type="text" name="input" id="input" />
+
+        <div>
+          <input
+            type="button"
+            id="seven"
+            value="7"
+            onclick="getInput(document.getElementById('seven').value)"
+          />
+          <input
+            type="button"
+            id="eight"
+            value="8"
+            onclick="getInput(document.getElementById('eight').value)"
+          />
+          <input
+            type="button"
+            id="nine"
+            value="9"
+            onclick="getInput(document.getElementById('nine').value)"
+          />
+          <input
+            type="button"
+            id="multiple"
+            value="*"
+            onclick="getInput(document.getElementById('multiple').value)"
+          />
+        </div>
+
+        <div>
+          <input
+            type="button"
+            id="four"
+            value="4"
+            onclick="getInput(document.getElementById('four').value)"
+          />
+          <input
+            type="button"
+            id="five"
+            value="5"
+            onclick="getInput(document.getElementById('five').value)"
+          />
+          <input
+            type="button"
+            id="six"
+            value="6"
+            onclick="getInput(document.getElementById('six').value)"
+          />
+          <input
+            type="button"
+            id="minus"
+            value="-"
+            onclick="getInput(document.getElementById('minus').value)"
+          />
+        </div>
+
+        <div>
+          <input
+            type="button"
+            id="one"
+            value="1"
+            onclick="getInput(document.getElementById('one').value)"
+          />
+          <input
+            type="button"
+            id="two"
+            value="2"
+            onclick="getInput(document.getElementById('two').value)"
+          />
+          <input
+            type="button"
+            id="three"
+            value="3"
+            onclick="getInput(document.getElementById('three').value)"
+          />
+          <input
+            type="button"
+            id="plus"
+            value="+"
+            onclick="getInput(document.getElementById('plus').value)"
+          />
+        </div>
+
+        <div>
+          <input
+            type="button"
+            id="zero"
+            value="0"
+            onclick="getInput(document.getElementById('zero').value)"
+          />
+          <input
+            type="button"
+            id="decimal"
+            value="."
+            onclick="getInput(document.getElementById('decimal').value)"
+          />
+          <input
+            type="button"
+            id="divide"
+            value="/"
+            onclick="getInput(document.getElementById('divide').value)"
+          />
+        </div>
+        <div class="results">
+          <input type="button" id="equals" value="=" onclick="Result()" />
+          <button
+            type="button"
+            id="AC"
+            value=""
+            onclick="clearInput(document.getElementById('AC').value)"
+          >
+            AC
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function getInput(x) {
+        document.getElementById("input").value += x;
+      }
+
+      function clearInput(y) {
+        document.getElementById("input").value = y;
+      }
+
+      function Result() {
+        var result = eval(document.getElementById("input").value);
+        document.getElementById("input").value = result;
+      }
+    </script>
+  </body>
+</html>
