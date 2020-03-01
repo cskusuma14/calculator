@@ -1,32 +1,6 @@
 <html>
   <head>
-    <style>
-      body {
-        background-color: gray;
-      }
-
-      div.mycalculator {
-        text-align: center;
-        width: 250px;
-        margin: 0 auto;
-      }
-
-      input[type="button"],
-      button {
-        width: 45px;
-        height: 45px;
-        margin: 5px;
-      }
-      input[type="text"] {
-        height: 50px;
-        width: 100%;
-        background-color: white;
-
-        margin-top: 100px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-      }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
 
   <body>
@@ -149,19 +123,6 @@
       </form>
     </div>
 
-    <script>
-      function getInput(x) {
-        document.getElementById("input").value += x;
-      }
-
-      function clearInput(y) {
-        document.getElementById("input").value = y;
-      }
-
-      function Result() {
-        var result = eval(document.getElementById("input").value);
-        document.getElementById("input").value = result;
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
